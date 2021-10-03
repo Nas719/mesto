@@ -1,0 +1,18 @@
+.profile__add-button {
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    border: 2px solid #FFFFFF;
+    box-sizing: border-box;
+    background-color: black;
+    background-image: url("../../../images/vector-plus.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 35px;
+    margin-left: 244px;
+    padding: 0;
+}
+
+.profile__add-button:hover {
+    opacity: 0.6;
+}

@@ -1,0 +1,7 @@
+.profile {
+    margin-top: 40px;
+    margin-left: 200px;
+    margin-right: 200px;
+    display: flex;
+    flex-direction: row;
+}
