@@ -5,8 +5,13 @@ const editButton = document.querySelector('.profile__edit-button');
 const formButton = document.querySelector('.popup__save-button');
 const form = document.querySelector('.popup__form');
 
+let name = document.querySelector('.profile__name').innerHTML;
+let profession = document.querySelector('.profile__profession').innerHTML;
+
 function openPopup () {
    popup.classList.add('popup_isOpen')
+   document.querySelector('.popup__name').value = name;
+   document.querySelector('.popup__profession').value = profession;
 }
 
 function closePopup() {

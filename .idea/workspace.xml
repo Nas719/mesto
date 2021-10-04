@@ -5,20 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a1eaba91-c445-4bfe-9efd-4a3ece277508" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/blocks/popup/__close-button/popup__close-button.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blocks/popup/__content/popup__content.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blocks/popup/__form/popup__form.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blocks/popup/__name/popup__name.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blocks/popup/__profession/popup__profession.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blocks/popup/__save-button/popup__save-button.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blocks/popup/__text-button/popup__text-button.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blocks/popup/__title/popup__title.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blocks/popup/popup.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/element/__item-name/element__item-name.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/element/__item-name/element__item-name.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/popup/__close-button/popup__close-button.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/popup/__close-button/popup__close-button.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/popup/__name/popup__name.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/popup/__name/popup__name.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/popup/__profession/popup__profession.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/popup/__profession/popup__profession.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/popup/__save-button/popup__save-button.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/popup/__save-button/popup__save-button.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/profile/__edit-button/profile__edit-button.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/profile/__edit-button/profile__edit-button.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../russian-travel/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../russian-travel/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../russian-travel/.idea/russian-travel.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../russian-travel/.idea/russian-travel.iml" afterDir="false" />
     </list>
@@ -75,7 +69,8 @@
       <workItem from="1633238682516" duration="69000" />
       <workItem from="1633238832136" duration="77000" />
       <workItem from="1633238928955" duration="13000" />
-      <workItem from="1633239085031" duration="30779000" />
+      <workItem from="1633239085031" duration="33414000" />
+      <workItem from="1633364908276" duration="3113000" />
     </task>
     <servers />
   </component>
@@ -92,5 +87,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

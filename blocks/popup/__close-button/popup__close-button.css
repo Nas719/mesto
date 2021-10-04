@@ -8,3 +8,7 @@
     right: -35px;
     cursor: pointer;
 }
+
+.popup__close-button:hover {
+    opacity: 0.6;
+}
