@@ -8,7 +8,9 @@
     background-image: url("../../../images/vector.png");
     background-repeat: no-repeat;
     background-position: center;
-    margin-left: 18px;
+    /*margin-left: 18px;*/
+    margin-top: 37px;
+    padding: 0;
 }
 
 .profile__edit-button:hover {

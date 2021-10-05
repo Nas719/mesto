@@ -16,6 +16,7 @@ function openPopup () {
 
 function closePopup() {
    popup.classList.remove('popup_isOpen')
+
 }
 
 editButton.addEventListener('click', openPopup)
@@ -35,6 +36,13 @@ popup.addEventListener('click', popupClickHandler)
 function formSubmit(event) {
    event.preventDefault()
    closePopup();
+   name = document.querySelector('.popup__name').value;
+   profession = document.querySelector('.popup__profession').value;
+   document.querySelector('.profile__name').innerHTML = name;
+   document.querySelector('.profile__profession').innerHTML = profession;
 }
 
-form.addEventListener('submit', formSubmit)
+formButton.addEventListener('click', function () {
+})
+
+form.addEventListener('submit', formSubmit);
