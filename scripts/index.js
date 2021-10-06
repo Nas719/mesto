@@ -6,12 +6,12 @@ const formButton = document.querySelector('.popup__save-button');
 const form = document.querySelector('.popup__form');
 
 let name = document.querySelector('.profile__name').innerHTML;
-let profession = document.querySelector('.profile__profession').innerHTML;
+let job = document.querySelector('.profile__job').innerHTML;
 
 function openPopup () {
    popup.classList.add('popup_isOpen')
-   document.querySelector('.popup__name').value = name;
-   document.querySelector('.popup__profession').value = profession;
+   document.querySelector('.popup__input_type_name').value = name;
+   document.querySelector('.popup__input_type_job').value = job;
 }
 
 function closePopup() {
@@ -36,10 +36,10 @@ popup.addEventListener('click', popupClickHandler)
 function formSubmit(event) {
    event.preventDefault()
    closePopup();
-   name = document.querySelector('.popup__name').value;
-   profession = document.querySelector('.popup__profession').value;
+   name = document.querySelector('.popup__input_type_name').value;
+   job = document.querySelector('.popup__input_type_job').value;
    document.querySelector('.profile__name').innerHTML = name;
-   document.querySelector('.profile__profession').innerHTML = profession;
+   document.querySelector('.profile__job').innerHTML = job;
 }
 
 formButton.addEventListener('click', function () {

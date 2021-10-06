@@ -7,7 +7,5 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-left: 21px;
-    margin-right: 15px;
-    margin-top: 25px;
+    margin: 25px 15px 0 21px;
 }

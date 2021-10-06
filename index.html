@@ -13,40 +13,42 @@
 
   <main class="content">
       <section class="profile">
-          <img class="profile__avatar" src="images/image.jpg">
+          <img class="profile__avatar" src="images/image.jpg" alt="Аватарка">
           <div class="profile__info">
-              <h1 class="profile__name">Жак-Ив Кусто</h1>
-              <button class="profile__edit-button"></button>
+              <div class="profile__container">
+                  <h1 class="profile__name">Жак-Ив Кусто</h1>
+                  <button class="profile__edit-button"></button>
+              </div>
+              <p class="profile__job">Исследователь океана</p>
           </div>
-          <p class="profile__profession">Исследователь океана</p>
           <button class="profile__add-button"></button>
       </section>
 
       <section class="elements">
           <ul class="element">
               <li class="element__item">
-                  <img class="element__item-image" src="images/kirill-pershin-1088404-unsplash.jpg">
-                  <figure class="element__item-name">Карачаевск <button class="element__item-like"></button></figure>
+                  <img class="element__item-image" src="images/kirill-pershin-1088404-unsplash.jpg" alt="Першин">
+                  <figure class="element__item-name">Карачаевск <button class="element__item-like element__item-like_active"></button></figure>
               </li>
               <li class="element__item">
-                  <img class="element__item-image" src="images/kirill-pershin-1404681-unsplash.png">
-                  <figure class="element__item-name">Гора Эльбрус <button class="element__item-like"></button></figure>
+                  <img class="element__item-image" src="images/kirill-pershin-1404681-unsplash.png" alt="Першин">
+                  <figure class="element__item-name">Гора Эльбрус <button class="element__item-like element__item-like_active"></button></figure>
               </li>
               <li class="element__item">
-                  <img class="element__item-image" src="images/kirill-pershin-1556355-unsplash.png">
-                  <figure class="element__item-name">Домбай <button class="element__item-like"></button></figure>
+                  <img class="element__item-image" src="images/kirill-pershin-1556355-unsplash.png" alt="Першин">
+                  <figure class="element__item-name">Домбай <button class="element__item-like element__item-like_active"></button></figure>
               </li>
               <li class="element__item">
-                  <img class="element__item-image" src="images/kirill-pershin-1404681-unsplash.png">
-                  <figure class="element__item-name">Гора Эльбрус <button class="element__item-like"></button></figure>
+                  <img class="element__item-image" src="images/kirill-pershin-1404681-unsplash.png" alt="Першин">
+                  <figure class="element__item-name">Гора Эльбрус <button class="element__item-like element__item-like_active"></button></figure>
               </li>
               <li class="element__item">
-                  <img class="element__item-image" src="images/kirill-pershin-1556355-unsplash.png">
-                  <figure class="element__item-name">Домбай <button class="element__item-like"></button></figure>
+                  <img class="element__item-image" src="images/kirill-pershin-1556355-unsplash.png" alt="Першин">
+                  <figure class="element__item-name">Домбай <button class="element__item-like element__item-like_active"></button></figure>
               </li>
               <li class="element__item">
-                  <img class="element__item-image" src="images/kirill-pershin-1088404-unsplash.jpg">
-                  <figure class="element__item-name">Карачаево-Ч... <button class="element__item-like"></button></figure>
+                  <img class="element__item-image" src="images/kirill-pershin-1088404-unsplash.jpg" alt="Першин">
+                  <figure class="element__item-name">Карачаево-Ч... <button class="element__item-like element__item-like_active"></button></figure>
               </li>
           </ul>
       </section>
@@ -61,9 +63,9 @@
          <button class="popup__close-button"></button>
          <h2 class="popup__title">Редактировать профиль</h2>
          <form class="popup__form" action="/">
-            <input type="text" placeholder="Имя" class="popup__name" name="name" required>
+            <input type="text" placeholder="Имя" class="popup__input popup__input_type_name" name="name" required>
              <span class="popup__input-line"></span>
-            <input type="text" placeholder="Профессия" class="popup__profession" name="profession" required>
+            <input type="text" placeholder="О себе" class="popup__input popup__input_type_job" name="job" required>
              <span class="popup__input-line"></span>
             <button type="submit" class="popup__save-button"><p class="popup__text-button">Сохранить</p></button>
          </form>
