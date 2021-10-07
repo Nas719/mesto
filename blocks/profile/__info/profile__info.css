@@ -2,3 +2,10 @@
     margin-right: auto;
     max-width: 45%;
 }
+
+@media screen and (max-width: 977px) {
+    .profile__info {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

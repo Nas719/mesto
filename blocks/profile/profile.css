@@ -4,11 +4,19 @@
     margin-right: 200px;
     display: flex;
     flex-direction: row;
+    max-width: 880px;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1245px) {
     .profile {
-        margin-left: 50px;
-        margin-right: 50px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (max-width: 977px) {
+    .profile {
+        flex-direction: column;
+        margin-top: 38px;
     }
 }

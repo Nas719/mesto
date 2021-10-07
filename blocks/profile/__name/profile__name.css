@@ -9,3 +9,9 @@
     display: inline-block;
     overflow: hidden;
 }
+
+@media screen and (max-width: 977px){
+    .profile__name {
+        margin: 0 15px 14px 0;
+    }
+}

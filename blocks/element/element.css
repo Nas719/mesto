@@ -2,6 +2,20 @@
     padding: 0;
     margin: 0;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(282px, 1fr));
-    gap: 17px;
+    grid-template-columns: repeat(auto-fit, 282px);
+    grid-gap: 20px 17px;
+    justify-content: center;
+}
+
+@media screen and (max-width: 1279px){
+    .element {
+        grid-template-columns: repeat(3, 298px);
+        grid-gap: 19px 16px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .element {
+        grid-template-columns: repeat(auto-fit, 282px);
+    }
 }

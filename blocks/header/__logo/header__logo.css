@@ -2,6 +2,13 @@
     max-width: 100%;
 }
 
+@media screen and (max-width: 1100px) {
+    .header__logo {
+        margin-top: 28px;
+        margin-left: 27px;
+    }
+}
+
 /*@media screen and (max-width: 380px) {*/
 /*    .header__logo {*/
 /*        width: 103.74px;*/
