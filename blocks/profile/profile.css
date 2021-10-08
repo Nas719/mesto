@@ -20,3 +20,10 @@
         margin-top: 38px;
     }
 }
+
+@media screen and (max-width: 320px){
+    .profile {
+        margin-left: 19px;
+        margin-right: 19px;
+    }
+}

@@ -3,9 +3,16 @@
     max-width: 45%;
 }
 
-@media screen and (max-width: 977px) {
+@media screen and (max-width: 977px){
     .profile__info {
         margin-left: auto;
         margin-right: auto;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .profile__info {
+        max-width: 282px;
+        margin-left: auto;
     }
 }

@@ -12,3 +12,13 @@
     display: block;
     outline-color: blue;
 }
+
+@media screen and (max-width: 320px) {
+    .popup__input {
+        width: 232px;
+    }
+
+    .popup__input:nth-child(2) {
+        margin-bottom: 45px;
+    }
+}

@@ -4,3 +4,9 @@
     align-items: center;
     margin-top: 54px;
 }
+
+@media screen and (max-width: 320px) {
+    .popup__form {
+        margin-top: 75px;
+    }
+}

@@ -6,3 +6,10 @@
     border-radius: 10px;
     position: relative;
 }
+
+@media screen and (max-width: 320px) {
+    .popup__content {
+        width: 282px;
+        min-height: 322px;
+    }
+}
