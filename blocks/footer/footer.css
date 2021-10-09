@@ -1,23 +1,18 @@
 .footer {
-    margin-left: auto;
-    margin-right: auto;
     margin-top: 67px;
     margin-bottom: 60px;
+    padding-left: 200px;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1144px) {
     .footer {
-        margin-left: 50px;
+        padding-left: 50px;
     }
 }
 
-/*@media screen and (max-width: ){*/
-
-/*}*/
-
 @media screen and (max-width: 320px){
     .footer {
-        margin-left: 19px;
+        padding-left: 19px;
         margin-top: 48px;
         margin-bottom: 36px;
     }

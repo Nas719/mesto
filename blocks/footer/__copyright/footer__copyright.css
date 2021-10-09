@@ -5,6 +5,10 @@
     line-height: 22px;
     color: #545454;
     max-width: 318px;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
 }
 
 @media screen and (max-width: 1245px) {

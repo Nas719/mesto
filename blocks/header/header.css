@@ -1,8 +1,7 @@
 .header {
-    margin-top: 45px;
-    width: 880px;
-    margin-right: auto;
-    margin-left: auto;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 45px 15% 0;
 }
 
 .header:after {
@@ -11,15 +10,11 @@
     border-bottom: 1px solid #545454;
     display: block;
     margin-top: 41px;
+    box-sizing: border-box;
 }
 
-@media screen and (max-width: 1000px){
+@media screen and (max-width: 768px){
     .header {
-        margin-top: 28px;
-        margin-left: 27px;
-    }
-
-    .header:after {
-        margin-top: 31px;
+        padding: 28px 0 31px;
     }
 }
