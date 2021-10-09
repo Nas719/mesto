@@ -1,21 +1,36 @@
 .element {
     padding: 0;
-    margin: 0;
+    margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, 282px);
+    grid-template-columns: repeat(auto-fit, minmax(282px, 1fr));
     grid-gap: 20px 17px;
     justify-content: center;
+    max-width: calc(100% - 2*200px);
 }
 
 @media screen and (max-width: 1279px){
     .element {
-        grid-template-columns: repeat(3, 298px);
-        grid-gap: 19px 16px;
+        grid-template-columns: repeat(3, 282px);
     }
 }
 
 @media screen and (max-width: 1000px) {
     .element {
         grid-template-columns: repeat(auto-fit, 282px);
+        max-width: calc(100% - 2*50px);
+    }
+}
+
+@media screen and (max-width: 767px){
+     .element {
+         max-width: calc(100% - 2*19px);
+     }
+}
+
+@media screen and (max-width: 500px) {
+    .element {
+        grid-template-columns: 282px;
+        grid-template-rows: repeat(6, minmax(282px, 1fr));
+        gap: 20px;
     }
 }
