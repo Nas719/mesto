@@ -5,22 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a1eaba91-c445-4bfe-9efd-4a3ece277508" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.nojekyll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/footer/__copyright/footer__copyright.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/footer/__copyright/footer__copyright.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/footer/footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/footer/footer.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/header/__logo/header__logo.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/header/__logo/header__logo.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/header/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/header/header.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/popup/__close-button/popup__close-button.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/popup/__close-button/popup__close-button.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/profile/__job/profile__job.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/profile/__job/profile__job.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/profile/__name/profile__name.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/profile/__name/profile__name.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/kirill-pershin-1088404-unsplash.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/kirill-pershin-1088404-unsplash.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/kirill-pershin-1404681-unsplash (1).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/kirill-pershin-1404681-unsplash.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/kirill-pershin-1556355-unsplash (1).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/kirill-pershin-1556355-unsplash.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../russian-travel/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../russian-travel/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../russian-travel/.idea/russian-travel.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../russian-travel/.idea/russian-travel.iml" afterDir="false" />
     </list>
@@ -37,7 +21,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../russian-travel" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/scripts/index.js" root0="FORCE_HIGHLIGHTING" />
@@ -94,7 +78,7 @@
       <workItem from="1633706785269" duration="1570000" />
       <workItem from="1633708372132" duration="91000" />
       <workItem from="1633709411997" duration="5173000" />
-      <workItem from="1633758732726" duration="6598000" />
+      <workItem from="1633758732726" duration="7033000" />
     </task>
     <servers />
   </component>
