@@ -4,7 +4,7 @@
     cursor: pointer;
     border: 1px solid #FFFFFF;
     box-sizing: border-box;
-    background-color: black;
+    background-color: transparent;
     background-image: url("../../../images/vector-edit.svg");
     background-repeat: no-repeat;
     background-position: center;

@@ -1,7 +1,5 @@
 .element__item {
     list-style-type: none;
-    min-width: 282px;
-    min-height: 361px;
     background-color: #FFFFFF;
     border-radius: 10px;
     position: relative;
