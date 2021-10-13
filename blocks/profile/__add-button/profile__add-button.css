@@ -4,7 +4,8 @@
     cursor: pointer;
     border: 2px solid #FFFFFF;
     box-sizing: border-box;
-    background-color: black;
+    background-color: transparent;
+    border-radius: 2px;
     background-image: url("../../../images/vector-plus.svg");
     background-repeat: no-repeat;
     background-position: center;
