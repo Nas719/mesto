@@ -26,48 +26,7 @@
 
       <section class="elements">
           <ul class="element">
-              <li class="element__item">
-                  <img class="element__item-image" src="images/moskva.png" alt="Москва">
-                  <div class="element__container">
-                      <h2 class="element__item-name">Москва</h2>
-                      <button class="element__item-like" type="button"></button>
-                  </div>
-              </li>
-              <li class="element__item">
-                  <img class="element__item-image" src="images/kaliningrad.png" alt="Калининград">
-                  <div class="element__container">
-                      <h2 class="element__item-name">Калининград</h2>
-                      <button class="element__item-like" type="button"></button>
-                  </div>
-              </li>
-              <li class="element__item">
-                  <img class="element__item-image" src="images/piter.png" alt="Санкт-Петербург">
-                  <div class="element__container">
-                      <h2 class="element__item-name">Санкт-Петербург</h2>
-                      <button class="element__item-like" type="button"></button>
-                  </div>
-              </li>
-              <li class="element__item">
-                  <img class="element__item-image" src="images/ekaterinburg.png" alt="Екатеринбург">
-                  <div class="element__container">
-                      <h2 class="element__item-name">Екатеринбург</h2>
-                      <button class="element__item-like" type="button"></button>
-                  </div>
-              </li>
-              <li class="element__item">
-                  <img class="element__item-image" src="images/sochi.png" alt="Сочи">
-                  <div class="element__container">
-                      <h2 class="element__item-name">Сочи</h2>
-                      <button class="element__item-like" type="button"></button>
-                  </div>
-              </li>
-              <li class="element__item">
-                  <img class="element__item-image" src="images/kazan.png" alt="Казань">
-                  <div class="element__container">
-                      <h2 class="element__item-name">Казань</h2>
-                      <button class="element__item-like" type="button"></button>
-                  </div>
-              </li>
+
           </ul>
       </section>
   </main>
@@ -85,6 +44,18 @@
             <input type="text" placeholder="О себе" class="popup__input popup__input_type_job" name="job" required>
             <button type="submit" class="popup__save-button">Сохранить</button>
          </form>
+      </div>
+  </div>
+
+  <div class="popup">
+      <div class="popup__content">
+          <button class="popup__close-button" type="button"></button>
+          <h2 class="popup__title">Новое место</h2>
+          <form class="popup__form" action="/" name="form">
+              <input type="text" placeholder="Название" class="popup__input popup__input_type_name" name="name" required>
+              <input type="text" placeholder="Ссылка на картинку" class="popup__input popup__input_type_job" name="job" required>
+              <button type="submit" class="popup__save-button">Создать</button>
+          </form>
       </div>
   </div>
 
