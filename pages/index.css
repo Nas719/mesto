@@ -24,6 +24,7 @@
 @import url(../blocks/element/__item-name/element__item-name.css);
 @import url(../blocks/element/__item-like/element__item-like.css);
 @import url(../blocks/element/__item-like/_active/element__item-like_active.css);
+@import url(../blocks/element/__delete-icon/element__delete-icon.css);
 
 @import url(../blocks/footer/footer.css);
 @import url(../blocks/footer/__copyright/footer__copyright.css);
