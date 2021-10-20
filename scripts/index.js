@@ -49,6 +49,12 @@ const initialCards = [
    }
 ];
 
+window.addEventListener('load', ()=> {
+
+   document.querySelectorAll('.popup').forEach((popup)=>
+       popup.classList.add('popup_transition'))
+})
+
 function createCard (name, link) {
 
    let itemCard = document.createElement('li');
