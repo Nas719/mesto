@@ -1,12 +1,12 @@
 const popupProfile = document.querySelector('.popup');
-const popupCard = document.querySelectorAll('.popup')[1];
-const popupImage = document.querySelectorAll('.popup')[2];
+const popupCard = document.getElementById('popup-card');
+const popupImage = document.getElementById('popup-img');
 
-let cardsList = document.querySelector('.element');
+const cardsList = document.querySelector('.element');
 
 const popupProfileCloseButton = document.querySelector('.popup__close-button');
-const popupCardCloseButton = document.querySelectorAll('.popup__close-button')[1];
-const popupImageCloseButton = document.querySelectorAll('.popup__close-button')[2];
+const popupCardCloseButton = document.getElementById('close-button-card');
+const popupImageCloseButton = document.getElementById('close-button-img');
 
 const editButtonProfile = document.querySelector('.profile__edit-button');
 const openButtonCard = document.querySelector('.profile__add-button');
@@ -14,13 +14,13 @@ const openButtonCard = document.querySelector('.profile__add-button');
 const formButtonProfile = document.querySelector('.popup__save-button');
 const form = document.querySelector('.popup__form');
 
-const formCard = document.querySelectorAll('.popup__form')[1];
+const formCard = document.getElementById('popup-form-card');
 
-let nameProfile = document.querySelector('.profile__name');
-let jobProfile = document.querySelector('.profile__job');
+const nameProfile = document.querySelector('.profile__name');
+const jobProfile = document.querySelector('.profile__job');
 
-let nameProfileFromInput = document.querySelector('.popup__input_type_name');
-let JobProfileFromInput = document.querySelector('.popup__input_type_job');
+const nameProfileFromInput = document.querySelector('.popup__input_type_name');
+const JobProfileFromInput = document.querySelector('.popup__input_type_job');
 
 const initialCards = [
    {
@@ -153,8 +153,8 @@ function formSubmit(event) {
 function formCardSubmit(event) {
    event.preventDefault();
 
-   let cardName = document.querySelectorAll('.popup__input_type_name')[1];
-   let cardImgLink = document.querySelectorAll('.popup__input_type_job')[1];
+   const cardName = document.getElementById('card-name');
+   const cardImgLink = document.getElementById('card-img-link');
 
    cardsList.prepend(createCard(cardName.value, cardImgLink.value));
    cardName.value = "";
