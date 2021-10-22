@@ -42,4 +42,4 @@
 @import url(../blocks/popup/_image/popup__content_image.css);
 @import url(../blocks/popup/__figure/popup__figure.css);
 @import url(../blocks/popup/__image/popup__image.css);
-@import url(../blocks/popup/__type-opacity/popup__type-opacity.css);
+@import url(../blocks/popup/_type-opacity/popup_type-opacity.css);
