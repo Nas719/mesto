@@ -1,10 +1,10 @@
-const popupProfile = document.querySelector('.popup');
+const popupProfile = document.getElementById('popup-profile');
 const popupCard = document.getElementById('popup-card');
 const popupImage = document.getElementById('popup-img');
 
 const cardsList = document.querySelector('.element');
 
-const popupProfileCloseButton = document.querySelector('.popup__close-button');
+const popupProfileCloseButton = document.getElementById('close-button-popup');
 const popupCardCloseButton = document.getElementById('close-button-card');
 const popupImageCloseButton = document.getElementById('close-button-img');
 
@@ -12,7 +12,7 @@ const editButtonProfile = document.querySelector('.profile__edit-button');
 const openButtonCard = document.querySelector('.profile__add-button');
 
 const formButtonProfile = document.querySelector('.popup__save-button');
-const form = document.querySelector('.popup__form');
+const formProfile = document.getElementById('popup-form-profile');
 
 const formCard = document.getElementById('popup-form-card');
 
@@ -20,7 +20,7 @@ const nameProfile = document.querySelector('.profile__name');
 const jobProfile = document.querySelector('.profile__job');
 
 const nameProfileFromInput = document.querySelector('.popup__input_type_name');
-const JobProfileFromInput = document.querySelector('.popup__input_type_job');
+const jobProfileFromInput = document.querySelector('.popup__input_type_job');
 
 const initialCards = [
    {
@@ -82,7 +82,7 @@ function createCard (name, link) {
 
    itemCardButtonLike.addEventListener('click', function () {
       if(itemCardButtonLike.classList.contains('element__item-like_active')) {
-         itemCardButtonLike.classList.remove('element__item-like_active')
+         itemCardButtonLike.classList.toggle('element__item-like_active')
       }else {
          itemCardButtonLike.classList.add('element__item-like_active')
       }
@@ -120,7 +120,7 @@ addUlInInitialCards();
 function openPopupProfile() {
    popupProfile.classList.add('popup_is-open');
    nameProfileFromInput.value = nameProfile.textContent;
-   JobProfileFromInput.value = jobProfile.textContent;
+   jobProfileFromInput.value = jobProfile.textContent;
 }
 
 function closePopupProfile() {
@@ -143,14 +143,14 @@ function deleteIconImage() {
    document.getElementById('img').remove();
 }
 
-function formSubmit(event) {
+function submitProfileForm(event) {
    event.preventDefault();
    closePopupProfile();
    nameProfile.textContent = nameProfileFromInput.value;
-   jobProfile.textContent = JobProfileFromInput.value;
+   jobProfile.textContent = jobProfileFromInput.value;
 }
 
-function formCardSubmit(event) {
+function submitCardForm(event) {
    event.preventDefault();
 
    const cardName = document.getElementById('card-name');
@@ -163,9 +163,9 @@ function formCardSubmit(event) {
    closePopupCard();
 }
 
-form.addEventListener('submit', formSubmit);
+formProfile.addEventListener('submit', submitProfileForm);
 
-formCard.addEventListener('submit', formCardSubmit);
+formCard.addEventListener('submit', submitCardForm);
 
 editButtonProfile.addEventListener('click', openPopupProfile);
 

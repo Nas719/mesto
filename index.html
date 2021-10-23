@@ -35,11 +35,11 @@
       <p class="footer__copyright"> &copy; 2021. Анастасия Полежаева</p>
   </footer>
 
-  <div class="popup">
+  <div class="popup" id="popup-profile">
       <div class="popup__content">
-         <button class="popup__close-button" type="button"></button>
+         <button class="popup__close-button" type="button" id="close-button-popup"></button>
          <h2 class="popup__title">Редактировать профиль</h2>
-         <form class="popup__form" action="/" name="form">
+         <form class="popup__form" action="/" name="form-content" id="popup-form-profile">
             <input type="text" placeholder="Имя" class="popup__input popup__input_type_name" name="name" required>
             <input type="text" placeholder="О себе" class="popup__input popup__input_type_job" name="job" required>
             <button type="submit" class="popup__save-button">Сохранить</button>
@@ -51,7 +51,7 @@
       <div class="popup__content">
           <button class="popup__close-button" type="button" id="close-button-card"></button>
           <h2 class="popup__title">Новое место</h2>
-          <form class="popup__form" action="/" name="form" id="popup-form-card">
+          <form class="popup__form" action="/" name="form-card" id="popup-form-card">
               <input type="text" placeholder="Название" class="popup__input popup__input_type_name" name="name" id="card-name" required>
               <input type="text" placeholder="Ссылка на картинку" class="popup__input popup__input_type_job" name="job" id="card-img-link" required>
               <button type="submit" class="popup__save-button">Создать</button>
