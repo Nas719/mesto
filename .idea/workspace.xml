@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a1eaba91-c445-4bfe-9efd-4a3ece277508" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/element/__item-image/element__item-image.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/element/__item-image/element__item-image.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../russian-travel/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../russian-travel/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../russian-travel/.idea/russian-travel.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../russian-travel/.idea/russian-travel.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../russian-travel/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../russian-travel/README.md" afterDir="false" />
@@ -101,7 +101,9 @@
       <workItem from="1634757727004" duration="479000" />
       <workItem from="1634919777061" duration="7199000" />
       <workItem from="1634980188758" duration="6140000" />
-      <workItem from="1635075056702" duration="7945000" />
+      <workItem from="1635075056702" duration="8456000" />
+      <workItem from="1635083739396" duration="682000" />
+      <workItem from="1635180681532" duration="706000" />
     </task>
     <servers />
   </component>

@@ -65,13 +65,14 @@ addUlInInitialCards();
 
 function createCard (name, link) {
 
-   let card = document.getElementById('element-li').content.cloneNode(true);
+   const card = document.getElementById('element-li').content.cloneNode(true);
 
    const cardDeleteIcon = card.querySelector(".element__delete-icon");
    const cardButtonLike = card.querySelector(".element__item-like");
    const cardImg = card.querySelector(".element__item-image");
 
    cardImg.src = link;
+   cardImg.alt = name;
    card.querySelector(".element__item-name").innerHTML = name;
 
    cardDeleteIcon.addEventListener('click', function () {
@@ -80,17 +81,14 @@ function createCard (name, link) {
    });
 
    cardButtonLike.addEventListener('click', function () {
-      if(cardButtonLike.classList.contains('element__item-like_active')) {
-         cardButtonLike.classList.toggle('element__item-like_active')
-      }else {
-         cardButtonLike.classList.add('element__item-like_active')
-      }
+      cardButtonLike.classList.toggle('element__item-like_active');
    })
 
    cardImg.addEventListener('click', function () {
       openPopup(popupImage);
       const popupImg = document.querySelector('.popup__image');
       popupImg.src = cardImg.closest('.element__item-image').src;
+      popupImg.alt = cardImg.closest('.element__item-image').alt;
       const  popupHeading = document.querySelector('.popup__caption');
       popupHeading.innerHTML = name;
    });
