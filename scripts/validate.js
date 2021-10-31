@@ -1,45 +1,58 @@
-function hideInputError(spanError, saveButton, inputElement) {
+function hideInputError(config, spanError, saveButton, inputElement) {
     spanError.textContent = '';
-    saveButton.classList.remove('popup__save-button_inactive');
     inputElement.style.borderBottom = "1px solid rgba(0,0,0,.2)";
 }
 
-function showInputError(spanError, saveButton, inputElement) {
+function showInputError(config, spanError, saveButton, inputElement) {
     spanError.textContent = inputElement.validationMessage;
-    saveButton.classList.add('popup__save-button_inactive');
     inputElement.style.borderBottom = '1px solid #FF0000';
 }
 
-//проверять есть ошибка или нет
-function checkInputValidity(formElement, inputElement) {
+function checkInputValidity(config, formElement, inputElement) {
     const spanError = formElement.querySelector(`.${inputElement.id}-error`);
-    const saveButton = formElement.querySelector('.popup__save-button');
+    const saveButton = formElement.querySelector(config.submitButtonSelector);
     if (inputElement.validity.valid) {
-        hideInputError(spanError, saveButton, inputElement);
+        hideInputError(config, spanError, saveButton, inputElement);
     } else {
-        showInputError(spanError, saveButton, inputElement);
+        showInputError(config, spanError, saveButton, inputElement);
+    }
+
+    if (formElement.checkValidity()) {
+        if (saveButton.classList.contains(config.inactiveButtonClass)) {
+            saveButton.classList.remove(config.inactiveButtonClass);
+        }
+        saveButton.disabled = false;
+    } else {
+        if (!saveButton.classList.contains(config.inactiveButtonClass)) {
+            saveButton.classList.add(config.inactiveButtonClass);
+        }
+        saveButton.disabled = true;
     }
 }
-// Находим все инпуты формы
-function setInputsEventListeners(formElement) {
-    const inputArray = formElement.querySelectorAll('.popup__input');
+
+function setInputsEventListeners(config, formElement) {
+    const inputArray = Array.from(formElement.querySelectorAll(config.inputSelector));
     inputArray.forEach((inputElement) => {
         inputElement.addEventListener('input', () => {
-            checkInputValidity(formElement, inputElement);
+            checkInputValidity(config, formElement, inputElement);
         });
     });
 }
 
-// Стартовать и найти все формы, убрать отправку на сервер
-function enableValidation() {
-    const formArray = Array.from(document.querySelectorAll('.popup__form'));
+function enableValidation(config) {
+    const formArray = Array.from(document.querySelectorAll(config.formSelector));
     console.log(formArray)
     formArray.forEach((formElement) => {
         formElement.addEventListener('submit', (event) => {
             event.preventDefault();
         });
-        setInputsEventListeners(formElement);
+        setInputsEventListeners(config, formElement);
     });
 }
 
-enableValidation();
+enableValidation({
+    formSelector: '.popup__form',
+    inputSelector: '.popup__input',
+    submitButtonSelector: '.popup__save-button',
+    inactiveButtonClass: 'popup__save-button_inactive',
+});

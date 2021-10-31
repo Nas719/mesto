@@ -2,7 +2,16 @@
     color: #FF0000;
     font-size: 12px;
     line-height: 15px;
-    justify-self: baseline;
     margin-bottom: 30px;
     margin-top: 5px;
+    max-width: 358px;
+    align-self: baseline;
+    margin-left: 36px;
+}
+
+@media screen and (max-width: 540px) {
+    .popup__span-error {
+        max-width: 232px;
+        margin-left: 26px;
+    }
 }
