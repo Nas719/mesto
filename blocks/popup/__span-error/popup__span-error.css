@@ -1,0 +1,8 @@
+.popup__span-error {
+    color: #FF0000;
+    font-size: 12px;
+    line-height: 15px;
+    justify-self: baseline;
+    margin-bottom: 30px;
+    margin-top: 5px;
+}
