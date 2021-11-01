@@ -2,11 +2,13 @@
     color: #FF0000;
     font-size: 12px;
     line-height: 15px;
-    margin-bottom: 30px;
-    margin-top: 5px;
+    /*margin-top: 5px;*/
     max-width: 358px;
+    /*margin-bottom: 29px;*/
     align-self: baseline;
-    margin-left: 36px;
+    padding-left: 36px;
+    margin: -12px 0 -5px;
+    z-index: 1;
 }
 
 @media screen and (max-width: 540px) {

@@ -55,13 +55,13 @@ window.addEventListener('load', ()=> {
    });
 });
 
-function addUlInInitialCards() {
+function renderInitialCards() {
    for (let i = 0; i < initialCards.length; i++) {
       cardsList.appendChild(createCard(initialCards[i].name, initialCards[i].link));
    }
 }
 
-addUlInInitialCards();
+renderInitialCards();
 
 function createCard (name, link) {
 
@@ -73,7 +73,7 @@ function createCard (name, link) {
 
    cardImg.src = link;
    cardImg.alt = name;
-   card.querySelector(".element__item-name").innerHTML = name;
+   card.querySelector(".element__item-name").textContent = name;
 
    cardDeleteIcon.addEventListener('click', function () {
       const delIconImg = cardDeleteIcon.closest('.element__item');
@@ -85,12 +85,12 @@ function createCard (name, link) {
    })
 
    cardImg.addEventListener('click', function () {
-      openPopup(popupImage);
       const popupImg = document.querySelector('.popup__image');
       popupImg.src = cardImg.closest('.element__item-image').src;
       popupImg.alt = cardImg.closest('.element__item-image').alt;
       const  popupHeading = document.querySelector('.popup__caption');
-      popupHeading.innerHTML = name;
+      popupHeading.textContent = name;
+      openPopup(popupImage);
    });
 
    return card;
@@ -98,10 +98,19 @@ function createCard (name, link) {
 
 function openPopup(popup) {
    popup.classList.add('popup_is-open');
+   document.addEventListener('keydown', closePopupByEscape);
+}
+
+function closePopupByEscape(event) {
+   if (event.key === "Escape") {
+      const popup = document.querySelector('.popup_is-open');
+      closePopup(popup);
+   }
 }
 
 function closePopup(popup) {
    popup.classList.remove('popup_is-open');
+   document.removeEventListener('keydown', closePopupByEscape);
 }
 
 function openPopupProfile() {
@@ -119,6 +128,9 @@ function closePopupImage() {
 }
 
 function openPopupCard() {
+   const saveButton = formCard.querySelector('.popup__save-button');
+   saveButton.classList.add('popup__save-button_inactive');
+   saveButton.disabled = true;
    openPopup(popupCard);
 }
 
@@ -126,15 +138,11 @@ function closePopupCard() {
    closePopup(popupCard);
 }
 
-function deleteIconImage() {
-   document.getElementById('img').remove();
-}
-
 function submitProfileForm(event) {
    event.preventDefault();
-   closePopupProfile();
    nameProfile.textContent = nameProfileFromInput.value;
    jobProfile.textContent = jobProfileFromInput.value;
+   closePopupProfile();
 }
 
 function submitCardForm(event) {
@@ -148,15 +156,6 @@ function submitCardForm(event) {
    cardImgLink.value = "";
    closePopupCard();
 }
-
-document.addEventListener('keydown', (event) => {
-   if (event.key === "Escape") {
-      const popup = document.querySelector('.popup_is-open');
-      if (popup) {
-         closePopup(popup);
-      }
-   }
-});
 
 function popupClickHandler(event) {
    const popup = document.querySelector('.popup_is-open');
