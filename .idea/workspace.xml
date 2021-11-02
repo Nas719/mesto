@@ -5,15 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a1eaba91-c445-4bfe-9efd-4a3ece277508" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/blocks/popup/__span-error/_active/popup__span-error_active.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blocks/popup/_type_error/popup__input_type_error.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/initial-сards.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/popup/__form/popup__form.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/popup/__form/popup__form.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blocks/popup/__input/popup__input.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/popup/__input/popup__input.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blocks/popup/__save-button/popup__save-button.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/popup/__save-button/popup__save-button.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blocks/popup/__span-error/popup__span-error.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/popup/__span-error/popup__span-error.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/popup/__title/popup__title.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/popup/__title/popup__title.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/validate.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/validate.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../russian-travel/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../russian-travel/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../russian-travel/.idea/russian-travel.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../russian-travel/.idea/russian-travel.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../russian-travel/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../russian-travel/README.md" afterDir="false" />
@@ -115,7 +115,8 @@
       <workItem from="1635514203715" duration="1952000" />
       <workItem from="1635595581204" duration="890000" />
       <workItem from="1635659909941" duration="8719000" />
-      <workItem from="1635743521738" duration="17676000" />
+      <workItem from="1635743521738" duration="17992000" />
+      <workItem from="1635828055378" duration="3542000" />
     </task>
     <servers />
   </component>

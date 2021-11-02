@@ -2,18 +2,15 @@
     color: #FF0000;
     font-size: 12px;
     line-height: 15px;
-    /*margin-top: 5px;*/
     max-width: 358px;
-    /*margin-bottom: 29px;*/
-    align-self: baseline;
-    padding-left: 36px;
-    margin: -12px 0 -5px;
+    justify-self: baseline;
+    margin: -28px 0 -2px;
     z-index: 1;
 }
 
 @media screen and (max-width: 540px) {
     .popup__span-error {
         max-width: 232px;
-        margin-left: 26px;
+        font-size: 10px;
     }
 }
