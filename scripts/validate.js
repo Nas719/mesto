@@ -29,6 +29,7 @@ function setInputsEventListeners(config, formElement) {
     inputArray.forEach((inputElement) => {
         inputElement.addEventListener('input', () => {
             checkInputValidity(config, formElement, inputElement);
+            toggleButtonState(formElement, saveButton);
         });
     });
 }
@@ -43,19 +44,13 @@ function enableValidation(config) {
     });
 }
 
-const hasInvalidInput = (inputArray) => {
-    return inputArray.some((inputElement) => {
-        return !inputElement.validity.valid;
-    });
-}
-
 const toggleButtonState = (config, formElement, saveButton) => {
-    if (formElement.checkValidity()) {
-        saveButton.classList.remove(config.inactiveButtonClass);
-        saveButton.disabled = false;
-    } else {
+    if (!formElement.checkValidity()) {
         saveButton.classList.add(config.inactiveButtonClass);
         saveButton.disabled = true;
+    } else {
+        saveButton.classList.remove(config.inactiveButtonClass);
+        saveButton.disabled = false;
     }
 }
 

@@ -128,9 +128,6 @@ function closePopupImage() {
 }
 
 function openPopupCard() {
-   const saveButton = formCard.querySelector('.popup__save-button');
-   saveButton.classList.add('popup__save-button_inactive');
-   saveButton.disabled = true;
    openPopup(popupCard);
 }
 
