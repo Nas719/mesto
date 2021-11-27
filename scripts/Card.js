@@ -1,45 +1,57 @@
 class Card {
-    constructor(name, link, cardTemplate) {
+    constructor(name, link, blockTemplate, popupImage, openPopup) {
         this._name = name;
         this._link = link;
-        this._blockTemplate = cardTemplate.getElementById('.element-li').cloneNode(true);
+        this._blockTemplate = blockTemplate;
+        this._popupImage = popupImage;
+        this._openPopup = openPopup;
     }
 
-    _createCard() {
-        this._blockTemplate.querySelector('.element__item-image').alt = this._link;
-        this._blockTemplate.querySelector('.element__item-image').link = this.name;
-        this._blockTemplate.querySelector('.element__item-name').textContent = this.name;
+    _getCardTemplate() {
+        const cardElement = this._blockTemplate
+            .content
+            .cloneNode(true);
 
-        this._cardButtonLike();
-        this._cardDeleteIcon();
-        this._cardImg();
-
-        return this._blockTemplate;
-    }
-
-    _cardButtonLike() {
-        this._blockTemplate.querySelector('.element__item-like').addEventListener('click', function () {
-            cardButtonLike.classList.toggle('element__item-like_active');
-    })
-
-    _cardDeleteIcon() {
-        this._blockTemplate.querySelector('.element__delete-icon').addEventListener('click', (evt) => {
-            evt.target.closest('.element-li').remove();
-        })
-    }
-
-    _cardImg() {
-        this._blockTemplate.querySelector('.popup__image').addEventListener('click', () => {
-            popupImg.querySelector('.element__item-image').alt = this._name;
-            popupImg.querySelector('.element__item-image').link = this._link;
-            popupImg.querySelector('.popup__caption').textContent = this._name;
-            openPopup(popupImage);
-        })
+        return cardElement;
     }
 
     renderCard() {
-            document.querySelector('.element-li').prepend(this._createCard());
-        }
+        this._view = this._getCardTemplate();
+        this._cardButtonLike();
+        this._cardDeleteIcon();
+        this._cardImg();
+        this._view.querySelector(".element__item-name").textContent = this._name;
+
+        return this._view;
     }
+
+    _cardButtonLike() {
+        const cardButtonLike = this._view.querySelector('.element__item-like');
+            cardButtonLike.addEventListener('click', function () {
+            cardButtonLike.classList.toggle('element__item-like_active');
+        });
+    }
+
+    _cardDeleteIcon() {
+        const cardDeleteIcon = this._view.querySelector('.element__delete-icon');
+        cardDeleteIcon.addEventListener('click', function () {
+            const delIconImg = cardDeleteIcon.closest('.element__item');
+            delIconImg.remove();
+        });
+    }
+
+    _cardImg() {
+        const cardImg = this._view.querySelector('.element__item-image');
+        cardImg.addEventListener('click', () => {
+            const popupImg = document.querySelector('.popup__image');
+            popupImg.src =  this._link;
+            popupImg.alt =  this._name;
+            document.querySelector('.popup__caption').textContent = this._name;
+            this._openPopup(this._popupImage);
+        });
+        cardImg.src = this._link;
+        cardImg.alt = this._name;
+    }
+}
 
 export default Card;
