@@ -5,7 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a1eaba91-c445-4bfe-9efd-4a3ece277508" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/scripts/Card.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/FormValidator.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/initialCards.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/validate.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/validate.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../russian-travel/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../russian-travel/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../russian-travel/.idea/russian-travel.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../russian-travel/.idea/russian-travel.iml" afterDir="false" />
@@ -110,7 +115,14 @@
       <workItem from="1635659909941" duration="8719000" />
       <workItem from="1635743521738" duration="17992000" />
       <workItem from="1635828055378" duration="4185000" />
-      <workItem from="1635915243419" duration="11302000" />
+      <workItem from="1635915243419" duration="11933000" />
+      <workItem from="1636040671051" duration="14000" />
+      <workItem from="1636188987629" duration="598000" />
+      <workItem from="1636863432986" duration="78000" />
+      <workItem from="1636871705365" duration="1429000" />
+      <workItem from="1637683223027" duration="877000" />
+      <workItem from="1637894648182" duration="118000" />
+      <workItem from="1637997185941" duration="8512000" />
     </task>
     <servers />
   </component>
