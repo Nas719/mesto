@@ -16,7 +16,6 @@ const popupImageCloseButton = document.getElementById('close-button-img');
 const editButtonProfile = document.querySelector('.profile__edit-button');
 const openButtonCard = document.querySelector('.profile__add-button');
 
-// const formButtonProfile = document.querySelector('.popup__save-button');
 const formProfile = document.getElementById('popup-form-profile');
 
 const formCard = document.getElementById('popup-form-card');
@@ -27,12 +26,10 @@ const jobProfile = document.querySelector('.profile__job');
 const nameProfileFromInput = document.querySelector('.popup__input_type_name');
 const jobProfileFromInput = document.querySelector('.popup__input_type_job');
 
-// const cardName = document.getElementById('card-name');
-// const cardImgLink = document.getElementById('card-img-link');
+const cardName = document.getElementById('card-name');
+const cardImgLink = document.getElementById('card-img-link');
 
 const blockTemplate = document.getElementById('element-li');
-// const itemCard = document.querySelector('.element__item');
-// const elementsArr = document.querySelector('.elements');
 
 
 window.addEventListener('load', ()=> {
@@ -50,51 +47,6 @@ function renderInitialCards() {
 }
 
 renderInitialCards();
-
-// function createCard() {
-//    const card = new Card(name, link, blockTemplate);
-//    const cardElement = card.renderCard();
-//    return cardElement;
-// }
-//
-// initialCards.forEach((item) => {
-//   const card = createCard(item);
-//    elementsArr.appendChild(card);
-// });
-
-// function createCard (name, link) {
-//
-//    const card = document.getElementById('element-li').content.cloneNode(true);
-//
-//    const cardDeleteIcon = card.querySelector(".element__delete-icon");
-//    const cardButtonLike = card.querySelector(".element__item-like");
-//    const cardImg = card.querySelector(".element__item-image");
-//
-//    cardImg.src = link;
-//    cardImg.alt = name;
-//    card.querySelector(".element__item-name").textContent = name;
-//
-//    cardDeleteIcon.addEventListener('click', function () {
-//       const delIconImg = cardDeleteIcon.closest('.element__item');
-//       delIconImg.remove();
-//    });
-//
-//    cardButtonLike.addEventListener('click', function () {
-//       cardButtonLike.classList.toggle('element__item-like_active');
-//    })
-//
-//    cardImg.addEventListener('click', function () {
-//       const popupImg = document.querySelector('.popup__image');
-//       popupImg.src = cardImg.closest('.element__item-image').src;
-//       popupImg.alt = cardImg.closest('.element__item-image').alt;
-//       const  popupHeading = document.querySelector('.popup__caption');
-//       popupHeading.textContent = name;
-//       openPopup(popupImage);
-//    });
-//
-//    return card;
-// }
-
 
 function openPopup(popup) {
    popup.classList.add('popup_is-open');
@@ -145,12 +97,13 @@ function submitProfileForm(event) {
 function submitCardForm(event) {
    event.preventDefault();
 
-   const cardName = document.getElementById('card-name');
-   const cardImgLink = document.getElementById('card-img-link');
-
-   const card = new Card(cardName.value, cardImgLink.value, blockTemplate, popupImage, openPopup);
+   const item = {
+      name: cardName.value,
+      link: cardImgLink.value
+   };
+   console.log(item);
+   const card = new Card(item.name, item.link, blockTemplate, popupImage, openPopup);
    cardsList.prepend(card.renderCard());
-
    cardName.value = "";
    cardImgLink.value = "";
    closePopupCard();
@@ -163,12 +116,6 @@ function popupClickHandler(event) {
       closePopup(popup)
    }
 }
-
-const popupCardValidation = new FormValidator(popupCard)
-popupCardValidation.enableValidation();
-
-const popupProfileValidation = new FormValidator(popupProfile)
-popupProfileValidation.enableValidation();
 
 popupProfile.addEventListener('click', popupClickHandler);
 popupCard.addEventListener('click', popupClickHandler);
@@ -187,3 +134,11 @@ popupProfileCloseButton.addEventListener('click', closePopupProfile);
 popupCardCloseButton.addEventListener('click', closePopupCard);
 
 popupImageCloseButton.addEventListener('click', closePopupImage);
+
+function activateValidation () {
+   const validation = new FormValidator(config)
+   validation.enableValidation();
+}
+
+activateValidation();
+

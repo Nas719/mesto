@@ -42,6 +42,8 @@ class Card {
 
     _cardImg() {
         const cardImg = this._view.querySelector('.element__item-image');
+        cardImg.src = this._link;
+        cardImg.alt = this._name;
         cardImg.addEventListener('click', () => {
             const popupImg = document.querySelector('.popup__image');
             popupImg.src =  this._link;
@@ -49,8 +51,6 @@ class Card {
             document.querySelector('.popup__caption').textContent = this._name;
             this._openPopup(this._popupImage);
         });
-        cardImg.src = this._link;
-        cardImg.alt = this._name;
     }
 }
 
