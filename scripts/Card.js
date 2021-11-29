@@ -17,34 +17,34 @@ class Card {
 
     renderCard() {
         this._view = this._getCardTemplate();
-        this._cardButtonLike();
-        this._cardDeleteIcon();
-        this._cardImg();
+        this._handleLikeIcon();
+        this._handleDeleteIcon();
+        this._setcardImg();
         this._view.querySelector(".element__item-name").textContent = this._name;
 
         return this._view;
     }
 
-    _cardButtonLike() {
-        const cardButtonLike = this._view.querySelector('.element__item-like');
-            cardButtonLike.addEventListener('click', function () {
-            cardButtonLike.classList.toggle('element__item-like_active');
+    _handleLikeIcon() {
+        const handleLikeIcon = this._view.querySelector('.element__item-like');
+        handleLikeIcon.addEventListener('click', function () {
+            handleLikeIcon.classList.toggle('element__item-like_active');
         });
     }
 
-    _cardDeleteIcon() {
-        const cardDeleteIcon = this._view.querySelector('.element__delete-icon');
-        cardDeleteIcon.addEventListener('click', function () {
-            const delIconImg = cardDeleteIcon.closest('.element__item');
+    _handleDeleteIcon() {
+        const handleDeleteIcon = this._view.querySelector('.element__delete-icon');
+        handleDeleteIcon.addEventListener('click', function () {
+            const delIconImg = handleDeleteIcon.closest('.element__item');
             delIconImg.remove();
         });
     }
 
-    _cardImg() {
-        const cardImg = this._view.querySelector('.element__item-image');
-        cardImg.src = this._link;
-        cardImg.alt = this._name;
-        cardImg.addEventListener('click', () => {
+    _setcardImg() {
+        const setcardImg = this._view.querySelector('.element__item-image');
+        setcardImg.src = this._link;
+        setcardImg.alt = this._name;
+        setcardImg.addEventListener('click', () => {
             const popupImg = document.querySelector('.popup__image');
             popupImg.src =  this._link;
             popupImg.alt =  this._name;
