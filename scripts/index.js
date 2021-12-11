@@ -41,9 +41,13 @@ window.addEventListener('load', ()=> {
 function renderInitialCards() {
 
    for (let i = 0; i < initialCards.length; i++) {
-      const card = new Card(initialCards[i].name, initialCards[i].link, blockTemplate, popupImage, openPopup);
-      cardsList.appendChild(card.renderCard());
+      cardsList.appendChild(createCard(initialCards[i]));
    }
+}
+
+function createCard(item) {
+   const card = new Card(item.name, item.link, blockTemplate, popupImage, openPopup);
+   return card.renderCard();
 }
 
 renderInitialCards();
@@ -101,9 +105,8 @@ function submitCardForm(event) {
       name: cardName.value,
       link: cardImgLink.value
    };
-   console.log(item);
-   const card = new Card(item.name, item.link, blockTemplate, popupImage, openPopup);
-   cardsList.prepend(card.renderCard());
+
+   cardsList.prepend(createCard(item));
    cardName.value = "";
    cardImgLink.value = "";
    closePopupCard();
@@ -136,8 +139,11 @@ popupCardCloseButton.addEventListener('click', closePopupCard);
 popupImageCloseButton.addEventListener('click', closePopupImage);
 
 function activateValidation () {
-   const validation = new FormValidator(config)
-   validation.enableValidation();
+   const validationProfile = new FormValidator(config, formProfile)
+   validationProfile.enableValidation();
+
+   const validationCard = new FormValidator(config, formCard)
+   validationCard.enableValidation();
 }
 
 activateValidation();
