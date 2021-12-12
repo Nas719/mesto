@@ -29,7 +29,7 @@ const jobProfileFromInput = document.querySelector('.popup__input_type_job');
 const cardName = document.getElementById('card-name');
 const cardImgLink = document.getElementById('card-img-link');
 
-const blockTemplate = document.getElementById('element-li');
+const blockTemplate = document.getElementById('element-li').content.querySelector('.element__item');
 
 
 window.addEventListener('load', ()=> {
@@ -46,7 +46,7 @@ function renderInitialCards() {
 }
 
 function createCard(item) {
-   const card = new Card(item.name, item.link, blockTemplate, popupImage, openPopup);
+   const card = new Card(item, blockTemplate, popupImage, openPopup);
    return card.renderCard();
 }
 

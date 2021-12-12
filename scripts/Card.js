@@ -1,50 +1,46 @@
 export default class Card {
-    constructor(name, link, blockTemplate, popupImage, openPopup) {
-        this._name = name;
-        this._link = link;
+    constructor(data, blockTemplate, popupImage, openPopup) {
+        this._name = data.name;
+        this._link = data.link;
         this._blockTemplate = blockTemplate;
         this._popupImage = popupImage;
         this._openPopup = openPopup;
+        this._view = this._getCardTemplate();
+        this._likeIcon = this._view.querySelector('.element__item-like');
+        this._deleteIcon = this._view.querySelector('.element__delete-icon');
+        this._cardImg = this._view.querySelector('.element__item-image');
     }
 
     _getCardTemplate() {
-        const cardElement = this._blockTemplate
-            .content
-            .cloneNode(true);
+        const cardElement = this._blockTemplate.cloneNode(true);
 
         return cardElement;
     }
 
     renderCard() {
-        this._view = this._getCardTemplate();
-        this._handleLikeIcon();
-        this._handleDeleteIcon();
-        this._setcardImg();
+
         this._view.querySelector(".element__item-name").textContent = this._name;
+
+        this._cardImg.src = this._link;
+        this._cardImg.alt = this._name;
+
+        this._setEventListeners();
 
         return this._view;
     }
 
-    _handleLikeIcon() {
-        const handleLikeIcon = this._view.querySelector('.element__item-like');
-        handleLikeIcon.addEventListener('click', function () {
-            handleLikeIcon.classList.toggle('element__item-like_active');
-        });
-    }
+    _setEventListeners() {
 
-    _handleDeleteIcon() {
-        const handleDeleteIcon = this._view.querySelector('.element__delete-icon');
-        handleDeleteIcon.addEventListener('click', function () {
-            const delIconImg = handleDeleteIcon.closest('.element__item');
-            delIconImg.remove();
+        this._likeIcon.addEventListener('click', () => {
+            this._likeIcon.classList.toggle('element__item-like_active');
         });
-    }
 
-    _setcardImg() {
-        const setcardImg = this._view.querySelector('.element__item-image');
-        setcardImg.src = this._link;
-        setcardImg.alt = this._name;
-        setcardImg.addEventListener('click', () => {
+        this._deleteIcon.addEventListener('click', () => {
+            this._view.remove()
+            this._view= null;
+        });
+
+        this._cardImg.addEventListener('click', () => {
             const popupImg = document.querySelector('.popup__image');
             popupImg.src =  this._link;
             popupImg.alt =  this._name;
