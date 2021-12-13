@@ -31,21 +31,28 @@ export default class Card {
 
     _setEventListeners() {
 
-        this._likeIcon.addEventListener('click', () => {
-            this._likeIcon.classList.toggle('element__item-like_active');
-        });
+        this._likeIcon.addEventListener('click', () => this._handleLikeClick());
 
-        this._deleteIcon.addEventListener('click', () => {
-            this._view.remove()
-            this._view= null;
-        });
+        this._deleteIcon.addEventListener('click', () => this._handleDeleteClick());
 
-        this._cardImg.addEventListener('click', () => {
-            const popupImg = document.querySelector('.popup__image');
-            popupImg.src =  this._link;
-            popupImg.alt =  this._name;
-            document.querySelector('.popup__caption').textContent = this._name;
-            this._openPopup(this._popupImage);
-        });
+        this._cardImg.addEventListener('click', () => this._handleImgClick());
     }
+
+    _handleLikeClick() {
+        this._likeIcon.classList.toggle('element__item-like_active');
+    }
+
+    _handleDeleteClick() {
+        this._view.remove()
+        this._view= null;
+    }
+
+    _handleImgClick() {
+        const popupImg = document.querySelector('.popup__image');
+        popupImg.src =  this._link;
+        popupImg.alt =  this._name;
+        document.querySelector('.popup__caption').textContent = this._name;
+        this._openPopup(this._popupImage);
+    }
+
 }
