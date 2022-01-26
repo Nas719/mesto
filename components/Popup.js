@@ -1,21 +1,25 @@
 import {popupCloseButtonSelector, popupClassSelector} from "../utils/constants";
 
+//отвечает за открытие и закрытие попапа
 export default class Popup {
     constructor(popupSelector) {
         this._popup = document.querySelector(popupSelector);
         this._closeButton = document.querySelector(popupCloseButtonSelector);
     }
 
+    //открытие попапа
     open() {
         this._popup.classList.add('popup_is-open');
         document.addEventListener('keydown', _handleEscClose);
     }
 
+    //закрытие попапа
     close() {
         this._popup.classList.remove('popup_is-open');
         document.removeEventListener('keydown', _handleEscClose);
     }
 
+    //закрытие попапа на Esc
     _handleEscClose(event) {
         if (event.key === "Escape") {
             const popup = document.querySelector('.popup_is-open');
@@ -23,6 +27,7 @@ export default class Popup {
         }
     }
 
+    //добавляет слушатель клика иконке закрытия попапа и закрывается при клике на затемнённую область вокруг формы
     setEventListeners() {
         this._closeButton.addEventListener('click', () => {
             this.close();

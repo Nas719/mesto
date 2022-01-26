@@ -30,3 +30,6 @@ export const popupCloseButtonSelector = ".popup__close-button";
 export const popupClassSelector = "popup";
 export const popupImageSelector = ".popup__image";
 export const popupCaptionSelector = ".popup__caption";
+export const cardImagePopupId = "popup-img";
+export const formSelector = '.popup__form';
+export const formInputSelector = '.popup__input';

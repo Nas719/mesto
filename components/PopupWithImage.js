@@ -1,6 +1,7 @@
 import Popup from './Popup';
 import {popupImageSelector, popupCaptionSelector} from "../utils/constants";
 
+//этот класс наследуется от Popup(попап картинки)
 export default class PopupWithImage extends Popup {
     constructor(popupSelector) {
         super(popupSelector);

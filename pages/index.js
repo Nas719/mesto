@@ -1,12 +1,15 @@
 import Card from "../components/Card.js";
 import FormValidator from "../components/FormValidator.js";
+import Section from "../components/Section.js";
+import PopupWithImage from "../components/PopupWithImage";
+import PopupWithForm from "../components/PopupWithForm";
 import {
+   config,
    initialCards,
-   cardListSelector
+   cardListSelector,
+   cardImagePopupId,
 } from "../utils/constants.js";
 
-import {config} from "../components/configValidation.js";
-import Section from "../components/Section.js";
 
 const popupProfile = document.getElementById('popup-profile');
 const popupCard = document.getElementById('popup-card');
@@ -36,12 +39,17 @@ const cardImgLink = document.getElementById('card-img-link');
 
 const blockTemplate = document.getElementById('element-li').content.querySelector('.element__item');
 
+
+
 const defaultCardList = new Section({items:initialCards, renderer:(item) => {
    const card = new Card(item, blockTemplate, popupImage, openPopup);
    defaultCardList.appendItem(card.renderCard());
 }}, cardListSelector);
 
 defaultCardList.renderItems();
+
+const cardImagePopup = new PopupWithImage(cardImagePopupId);
+cardImagePopup.setEventListeners();
 
 window.addEventListener('load', ()=> {
    document.querySelectorAll('.popup').forEach((popup)=> {
@@ -109,19 +117,19 @@ function submitProfileForm(event) {
    closePopupProfile();
 }
 
-function submitCardForm(event) {
-   event.preventDefault();
-
-   const item = {
-      name: cardName.value,
-      link: cardImgLink.value
-   };
-
-   defaultCardList.prependItem(createCard(item));
-   cardName.value = "";
-   cardImgLink.value = "";
-   closePopupCard();
-}
+// function submitCardForm(event) {
+//    event.preventDefault();
+//
+//    const item = {
+//       name: cardName.value,
+//       link: cardImgLink.value
+//    };
+//
+//    defaultCardList.prependItem(createCard(item));
+//    cardName.value = "";
+//    cardImgLink.value = "";
+//    closePopupCard();
+// }
 
 // function popupClickHandler(event) {
 //    const popup = document.querySelector('.popup_is-open');

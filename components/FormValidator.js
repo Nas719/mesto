@@ -5,6 +5,7 @@ export default class FormValidator {
        this._saveButton = formElement.querySelector(this._config.submitButtonSelector);
    }
 
+   //показываем ошибку
     _showInputError = (inputElement) => {
         const spanError = this._formElement.querySelector(`.${inputElement.id}-error`);
         inputElement.classList.add(this._config.inputErrorClass);
@@ -12,6 +13,7 @@ export default class FormValidator {
         spanError.classList.add(this._config.spanErrorClass);
     }
 
+    //скрываем ошибку
      _hideInputError = (inputElement) => {
         const spanError = this._formElement.querySelector(`.${inputElement.id}-error`);
         inputElement.classList.remove(this._config.inputErrorClass);
@@ -19,6 +21,7 @@ export default class FormValidator {
         spanError.classList.remove(this._config.spanErrorClass);
     }
 
+    //проверяем на валидность
      _checkInputValidity = (inputElement) => {
         if (!inputElement.validity.valid) {
             this._showInputError(inputElement);
