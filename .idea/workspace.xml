@@ -5,10 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a1eaba91-c445-4bfe-9efd-4a3ece277508" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/components/PopupWithForm.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/FormValidator.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/FormValidator.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/Popup.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Popup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/PopupWithForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/PopupWithForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/PopupWithImage.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/PopupWithImage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Section.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Section.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/configValidation.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/configValidation.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/utils/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/constants.js" afterDir="false" />
     </list>
@@ -147,7 +149,8 @@
       <workItem from="1643125324384" duration="720000" />
       <workItem from="1643126192712" duration="32000" />
       <workItem from="1643126331931" duration="4432000" />
-      <workItem from="1643131666139" duration="9622000" />
+      <workItem from="1643131666139" duration="9856000" />
+      <workItem from="1643875101443" duration="11236000" />
     </task>
     <servers />
   </component>
